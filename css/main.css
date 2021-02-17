@@ -1,0 +1,113 @@
+/* .vilka-start {
+    border: 1px solid #7f7f7f;
+    border-left: none;
+    position: absolute;
+    top: 25px;
+    bottom: 25px;
+    left: 0;
+    width: 335px;
+    z-index: 1;
+}
+
+ .winners {
+    display: inline-block;
+    position: absolute;
+    left: 345px;
+    top: 50%;
+    background: #d8d8d8;
+    margin-top: -24px;
+}
+
+.t-grid-match:nth-child(odd):after {
+    top: 26px;
+    border-bottom: 0;
+}
+.t-grid-match:after {
+    position: absolute;
+    right: -30px;
+    border: 1px solid #d7d8dc;
+    border-left: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    width: 30px;
+}
+
+.t-grid-match:nth-child(2n):after {
+    bottom: 26px;
+    border-top: 0;
+}
+.t-grid-match:after {
+    position: absolute;
+    right: -30px;
+    border: 1px solid #d7d8dc;
+    border-left: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    width: 30px;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../src/bg.jpg);
+    color: #fff;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.columns-titles {
+    display: flex;
+}
+
+.column-title {
+    display: flex;
+}
+
+.columns {
+    display: flex;
+}
+
+.column {
+    margin-right: 20px;
+}
+
+.column-item {
+    border: 2px solid #9c42c8;
+    margin-bottom: 30px;
+}
+
+.column-item__team {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column-item__inf {
+    display: flex;
+}
+
+.column-item__team:first-child {
+    border-bottom: 2px solid #9c42c8;
+}
+
+.column-item__team-logo {
+    width: 17px;
+    margin-right: 10px;
+}
+
+.column-item__team-logo img {
+    width: 100%;
+}
+
+.column-item__team-title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.column-item__team-score {
+    background: #efbf41;
+}
