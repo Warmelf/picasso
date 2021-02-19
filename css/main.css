@@ -1,53 +1,3 @@
-/* .vilka-start {
-    border: 1px solid #7f7f7f;
-    border-left: none;
-    position: absolute;
-    top: 25px;
-    bottom: 25px;
-    left: 0;
-    width: 335px;
-    z-index: 1;
-}
-
- .winners {
-    display: inline-block;
-    position: absolute;
-    left: 345px;
-    top: 50%;
-    background: #d8d8d8;
-    margin-top: -24px;
-}
-
-.t-grid-match:nth-child(odd):after {
-    top: 26px;
-    border-bottom: 0;
-}
-.t-grid-match:after {
-    position: absolute;
-    right: -30px;
-    border: 1px solid #d7d8dc;
-    border-left: 0;
-    content: "";
-    display: block;
-    height: 5px;
-    width: 30px;
-}
-
-.t-grid-match:nth-child(2n):after {
-    bottom: 26px;
-    border-top: 0;
-}
-.t-grid-match:after {
-    position: absolute;
-    right: -30px;
-    border: 1px solid #d7d8dc;
-    border-left: 0;
-    content: "";
-    display: block;
-    height: 5px;
-    width: 30px;
-} */
-
 * {
     padding: 0;
     margin: 0;
@@ -60,38 +10,173 @@ body {
     font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
+.columns-titles__wrapper {
+    margin: 20px auto 10px;
+    max-width: 700px;
+}
+
 .columns-titles {
     display: flex;
 }
 
 .column-title {
     display: flex;
+    width: 200px;  
+    margin-right: 25px;
+}
+
+.column-title p {
+    margin: 0 auto;
+    font-size: 22px;
+}
+
+.hr {
+    margin-bottom: 30px;
+    border: none;
+    background-color: #9c42c8; 
+    color: #9c42c8; 
+    height: 2px;
 }
 
 .columns {
     display: flex;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
 .column {
     margin-right: 20px;
 }
 
+.second-column {
+    margin-top: 50px;
+}
+
+.second-column .column-item:first-child {
+    margin-bottom: 132px;
+}
+
+.column:last-child {
+    margin-top: 145px;
+}
+
 .column-item {
-    border: 2px solid #9c42c8;
+    border: 3px solid #9c42c8;
     margin-bottom: 30px;
+    position: relative;
+}
+
+.column-item:nth-child(n):after {
+    position: absolute;
+    right: -43px;
+    top: 32px;
+    border: 3px solid #9c42c8;
+    border-left: 0;
+    border-bottom: 0;
+    content: "";
+    display: block;
+    height: 12px;
+    width: 40px;
+} 
+
+.column-item:nth-child(2n):after {
+    position: absolute;
+    right: -43px;
+    top: 17px;
+    border: 3px solid #9c42c8;
+    border-left: 0;
+    border-top: 0;
+    content: "";
+    display: block;
+    height: 14px;
+    width: 40px;
+} 
+
+.second-column .column-item:nth-child(n):after {
+    position: absolute;
+    right: -45px;
+    top: 32px;
+    border: 3px solid #efc45b;
+    border-left: 0;
+    border-bottom: 0;
+    content: "";
+    display: block;
+    height: 58px;
+    width: 40px;
+} 
+
+.second-column .column-item:nth-child(2n):after {
+    position: absolute;
+    right: -45px;
+    top: -34px;
+    border: 3px solid #efc45b;
+    border-left: 0;
+    border-top: 0;
+    content: "";
+    display: block;
+    height: 65px;
+    width: 40px;
+} 
+
+.column:last-child .column-item:after {
+    border: 0;
+}
+
+.column:last-child .column-item {
+    border-color: #efc45b;
+}
+
+.column:last-child .column-item__team:first-child {
+    border-bottom: 3px solid #efc45b;
 }
 
 .column-item__team {
     display: flex;
     justify-content: space-between;
+    width: 200px;
+}
+
+.column-item__team:first-child {
+    border-bottom: 3px solid #9c42c8;
 }
 
 .column-item__inf {
     display: flex;
+    margin-left: 7px;
+    padding: 5px 0;
 }
 
-.column-item__team:first-child {
-    border-bottom: 2px solid #9c42c8;
+.column:last-child .bg-win .column-item__inf {
+    padding: 0;
+}
+
+.column:last-child .bg-win .column-item__team-score {
+    padding: 0;
+}
+
+.column:last-child .bg-win .column-item__team-logo img {
+    margin-top: 25px;
+}
+
+.column:last-child .bg-win .column-item__team-score span {
+    margin-top: 50%;
+    display: inline-block;
+}
+
+.column:last-child .bg-win .column-item__team-title {
+   position: relative;
+}
+
+.column:last-child .bg-win .img-win__wrapper {
+    position: absolute;
+    width: 17px;
+    top: 1px;
+    left: 25px;
+}
+
+.column:last-child .bg-win a {
+    position: absolute;
+    top: 17px;
 }
 
 .column-item__team-logo {
@@ -110,4 +195,25 @@ body {
 
 .column-item__team-score {
     background: #efbf41;
+    width: 20px;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.bg-win {
+    background: rgb(161, 1, 161, 0.4);
+}
+
+.column:last-child .bg-win {
+    background: rgb(249, 203, 68, 0.2);
+}
+
+.img-win {
+    width: 100%;
+}
+
+@media screen and (max-width: 721px) {
+
 }
