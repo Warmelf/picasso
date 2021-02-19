@@ -6,8 +6,11 @@
 
 body {
     background: url(../src/bg.jpg);
+    height: 100%;
+    background-attachment: fixed;
     color: #fff;
     font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    overflow: hidden;
 }
 
 .columns-titles__wrapper {
@@ -277,5 +280,20 @@ body {
 
     .column:last-child {
         margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 494px) {
+
+    .columns-titles__wrapper {
+        display: none;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .columns {
+        margin: 50px 5px 0;
     }
 }
